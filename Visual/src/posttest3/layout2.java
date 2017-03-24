@@ -31,10 +31,10 @@ public class layout2 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        cara = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         home = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
+        cara = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         ukt = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -80,25 +80,6 @@ public class layout2 extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 0, 204));
         jPanel2.setLayout(new java.awt.CardLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/posttest3/Flow_UKT_Registrasi_Unmul_Maba_20151.jpg"))); // NOI18N
-
-        javax.swing.GroupLayout caraLayout = new javax.swing.GroupLayout(cara);
-        cara.setLayout(caraLayout);
-        caraLayout.setHorizontalGroup(
-            caraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(caraLayout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addGap(0, 479, Short.MAX_VALUE))
-        );
-        caraLayout.setVerticalGroup(
-            caraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(caraLayout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addGap(0, 58, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(cara, "card2");
-
         home.setBackground(new java.awt.Color(102, 255, 51));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/posttest3/Gedung_Rektorat_Universitas_Mulawarman.jpg"))); // NOI18N
@@ -116,28 +97,38 @@ public class layout2 extends javax.swing.JFrame {
 
         jPanel2.add(home, "card3");
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/posttest3/Flow_UKT_Registrasi_Unmul_Maba_20151.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout caraLayout = new javax.swing.GroupLayout(cara);
+        cara.setLayout(caraLayout);
+        caraLayout.setHorizontalGroup(
+            caraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4)
+        );
+        caraLayout.setVerticalGroup(
+            caraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4)
+        );
+
+        jPanel2.add(cara, "card2");
+
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/posttest3/17b5DRAF-LAMPIRAN-III-UKT-2015-FINAL-UNMUL-1.jpg"))); // NOI18N
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/posttest3/fix.jpg"))); // NOI18N
-        jLabel16.setText("jLabel16");
 
         javax.swing.GroupLayout uktLayout = new javax.swing.GroupLayout(ukt);
         ukt.setLayout(uktLayout);
         uktLayout.setHorizontalGroup(
             uktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(uktLayout.createSequentialGroup()
-                .addGroup(uktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16))
-                .addGap(0, 265, Short.MAX_VALUE))
+            .addComponent(jLabel15)
+            .addComponent(jLabel16)
         );
         uktLayout.setVerticalGroup(
             uktLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(uktLayout.createSequentialGroup()
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16)
-                .addGap(0, 190, Short.MAX_VALUE))
+                .addComponent(jLabel16))
         );
 
         jPanel2.add(ukt, "card4");
@@ -423,6 +414,11 @@ public class layout2 extends javax.swing.JFrame {
         });
 
         jButton6.setText("KELUAR");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -431,27 +427,30 @@ public class layout2 extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jButton3)
-                .addGap(22, 22, 22)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton5)
-                .addGap(18, 18, 18)
-                .addComponent(jButton6)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel6, java.awt.BorderLayout.LINE_START);
@@ -548,6 +547,11 @@ public class layout2 extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
